@@ -32,5 +32,4 @@ def takecommand():
 
 while True:
     takecommand()
-    aditya
     
