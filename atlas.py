@@ -42,11 +42,11 @@ def takecommand():
         return "none"
     return query  
 
-<<<<<<< HEAD
+
 wish()
 # while True:
     # takecommand()
-=======
+
 while True:
     takecommand() 
->>>>>>> a79093e9e0edc3811c570f845f14932afef6a9a6
+
