@@ -32,4 +32,4 @@ def takecommand():
 
 while True:
     takecommand()
-    
+adi chu    
