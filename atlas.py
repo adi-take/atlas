@@ -31,5 +31,4 @@ def takecommand():
     return query  
 
 while True:
-    takecommand()
-adi chu    
+    takecommand() 
