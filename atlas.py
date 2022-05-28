@@ -45,11 +45,10 @@ def takecommand():
 
 def TaskExecution():
     wish()
-    while True:
+    while True: 
         query = takecommand().lower()
-
-        # # if 'play music' in query:
-        #     music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
-        #     os.startfile(os.path.join(music_dir))
-        #     # sys.exit()
+        if 'play music' in query:
+            music_dir = ("C:\\Users\\USER\\Music\\music.mp3")
+            os.startfile(os.path.join(music_dir))
+            # sys.exit()
 TaskExecution()
