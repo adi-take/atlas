@@ -7,13 +7,25 @@
 # voices= engine.getProperty('voices')
 # engine.setProperty('voice',voices[0].id)
 import pyttsx3
-import speech_recognition as sr
+import speech_recognition as sr    #pip install 
+import datetime
 engine = pyttsx3.init('sapi5')
 
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
     
+def wish():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<=12:
+        speak("good morning sir")
+
+    elif hour>=12 and hour<=18:
+        speak("good afternoon sir")   
+
+    else:
+        speak("good evening sir")
+    speak("i'm jaav, please tell me how can i help you")
 
 def takecommand():
     r = sr.Recognizer()
@@ -30,6 +42,6 @@ def takecommand():
         return "none"
     return query  
 
-while True:
-    takecommand()
-adi chu    
+wish()
+# while True:
+    # takecommand()
