@@ -10,6 +10,7 @@ import pyttsx3
 import speech_recognition as sr    #pip install 
 import datetime
 engine = pyttsx3.init('sapi5')
+import os
 
 def speak(audio):
     engine.say(audio)
@@ -43,10 +44,12 @@ def takecommand():
     return query  
 
 
-wish()
-# while True:
-    # takecommand()
+def TaskExecution(self):
+    wish()
+    while True:
+        self.query = takecommand(self).lower()
 
-while True:
-    takecommand() 
-
+        if 'play music' in self.query:
+            music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
+            os.startfile(os.path.join(music_dir))
+            # sys.exit()
