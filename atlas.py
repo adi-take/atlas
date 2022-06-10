@@ -54,23 +54,5 @@ def TaskExecution():
             music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
             os.startfile(os.path.join(music_dir))
             # sys.exit()
-<<<<<<< HEAD
-    jinal 
- 
-=======
             
 TaskExecution()
-<<<<<<< HEAD
-=======
-jinal
-=======
-def TaskExecution():
-    wish()
-    while True: 
-        query = takecommand().lower()
-        if 'play music' in query:
-            music_dir = ("C:\\Users\\USER\\Music\\music.mp3")
-            os.startfile(os.path.join(music_dir))
-            # sys.exit()
-
->>>>>>> 07dd48e21d24dd5c8bc513cebc68920f6779c18c
