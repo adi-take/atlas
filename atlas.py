@@ -6,11 +6,13 @@
 
 # voices= engine.getProperty('voices')
 # engine.setProperty('voice',voices[0].id)
+# from typing_extensions import Self
 import pyttsx3
 import speech_recognition as sr    #pip install 
 import datetime
-engine = pyttsx3.init('sapi5')
 import os
+
+engine = pyttsx3.init('sapi5')
 
 def speak(audio):
     engine.say(audio)
@@ -43,6 +45,21 @@ def takecommand():
         return "none"
     return query  
 
+<<<<<<< HEAD
+
+def TaskExecution():
+    wish()
+    while True:
+        query = takecommand().lower()
+
+        if 'play music' in query:
+            music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
+            os.startfile(os.path.join(music_dir))
+            # sys.exit()
+            
+TaskExecution()
+jinal
+=======
 def TaskExecution():
     wish()
     while True: 
@@ -51,4 +68,9 @@ def TaskExecution():
             music_dir = ("C:\\Users\\USER\\Music\\music.mp3")
             os.startfile(os.path.join(music_dir))
             # sys.exit()
+<<<<<<< HEAD
 TaskExecution()aditya
+=======
+TaskExecution()
+>>>>>>> 933a6148e6128ef74e4c9ac0654d0633ef221a1f
+>>>>>>> 6e1aecd2221cbf362adb0e6b8fd20fdec45d0a34
