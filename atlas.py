@@ -68,9 +68,4 @@ def TaskExecution():
             music_dir = ("C:\\Users\\USER\\Music\\music.mp3")
             os.startfile(os.path.join(music_dir))
             # sys.exit()
-<<<<<<< HEAD
-TaskExecution()aditya
-=======
-TaskExecution()
->>>>>>> 933a6148e6128ef74e4c9ac0654d0633ef221a1f
->>>>>>> 6e1aecd2221cbf362adb0e6b8fd20fdec45d0a34
+
