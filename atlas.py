@@ -54,5 +54,9 @@ def TaskExecution():
             music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
             os.startfile(os.path.join(music_dir))
             # sys.exit()
+<<<<<<< HEAD
     jinal 
  
+=======
+            
+TaskExecution()
