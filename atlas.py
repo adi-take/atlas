@@ -45,6 +45,7 @@ def takecommand():
         return "none"
     return query  
 
+<<<<<<< HEAD
 
 def TaskExecution():
     wish()
@@ -58,3 +59,14 @@ def TaskExecution():
             
 TaskExecution()
 jinal
+=======
+def TaskExecution():
+    wish()
+    while True: 
+        query = takecommand().lower()
+        if 'play music' in query:
+            music_dir = ("C:\\Users\\USER\\Music\\music.mp3")
+            os.startfile(os.path.join(music_dir))
+            # sys.exit()
+TaskExecution()
+>>>>>>> 933a6148e6128ef74e4c9ac0654d0633ef221a1f
