@@ -5,7 +5,7 @@ import datetime                    #pip install DateTime
 import os
 import sys
 import wikipedia as wi             #pip install wikipedia
-
+import webbrowser
 
 engine = pyttsx3.init('sapi5')
 
@@ -14,6 +14,7 @@ def speak(audio):
     engine.runAndWait()
     
 def wish():
+    
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<=12:
         speak("good morning sir")
@@ -26,6 +27,7 @@ def wish():
     speak("i'm jaav, please tell me how can i help you")
 
 def takecommand():
+    
     r = sr.Recognizer()
     with sr.Microphone() as source:
          print("listening......")
@@ -80,5 +82,53 @@ def TaskExecution():
              print(result)
              speak(" according to', ' wikipedia ")
              speak(result)
+
+
+        elif 'time' in query:
+              strftime = datetime.datetime.now().strftime("%H %M")
+              print(strftime)
+              speak(F"sir,the time is{strftime}")
+
+
+        elif 'open youtube' in query:
+             webbrowser.open("https://www.youtube.com/")
+             speak("opening youtube")
+
+        elif 'open google' in query:
+             webbrowser.open("www.google.com")
+             speak("opening google")
+
+# for open google meet
+
+        elif 'open meet' in query:
+             webbrowser.open("https://meet.google.com/")
+             speak("ok sir,opening google meet")
+
+# for open stack overflow
+
+        elif 'stack overflow' in query:
+             webbrowser.open("https://stackoverflow.com/")
+             speak("opening stack over")
+
+# for creators information
+
+        elif 'creators' in query:
+             speak("jinal shah , ADITYA , A J , VARUN")
+         
+        elif 'jinal shah' in query:
+            speak("he is one of my creator")
+            speak("currently he is pursuing BCA from sabarmati university")
+
+        elif 'aditya' in query:
+            speak("he is one of my creator")
+            speak("currently he is pursuing BCA from sabarmati university")
+        
+        elif 'aj' in query:
+            speak("he is one of my creator")
+            speak("currently he is pursuing BCA from sabarmati university")
+
+        elif 'varun' in query:
+            speak("he is one of my creator")
+            speak("currently he is pursuing BCA from sabarmati university")
 
 TaskExecution()
