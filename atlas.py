@@ -34,9 +34,9 @@ def takecommand():
          r.pause_threshold = 1
          audio = r.listen(source)
     try:
-        print("Recorgnizing......")
-        query = r.recognize_google(audio, language='en-in')
-        print(F"user said: {query}\n")
+         print("Recorgnizing......")
+         query = r.recognize_google(audio,language='en-in')
+         print(F"user said: {query}\n")
     except Exception as e:
         speak("say that again please.....")
         return "none"
