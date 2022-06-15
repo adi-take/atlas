@@ -27,17 +27,16 @@ def wish():
     speak("i'm jaav, please tell me how can i help you")
 
 def takecommand():
-    
     r = sr.Recognizer()
     with sr.Microphone() as source:
-         print("listening......")
-         r.pause_threshold = 1
-         audio = r.listen(source)
+        print("listening......")
+        r.pause_threshold = 1
+        audio = r.listen(source)
     try:
-         print("Recorgnizing......")
-         query = r.recognize_google(audio,language='en-in')
-         print(F"user said: {query}\n")
-    except Exception as e:
+        print("Recorgnizing......")
+        query = r.recognize_google(audio,language = 'en-in')
+        print(F"user said: {query}\n")
+    except Exception:
         speak("say that again please.....")
         return "none"
     return query  
@@ -50,7 +49,6 @@ def TaskExecution():
         if 'play music' in query:
             music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
             os.startfile(os.path.join(music_dir))
-            # sys.exit()
 
         elif 'code red' or 'take a break' or 'take rest' in  query:
              hour = int(datetime.datetime.now().hour)
