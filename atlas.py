@@ -1,18 +1,10 @@
-# from cmath import phase
-# from email.mime import audio
-# import re
-# from signal import pause
-# from socket import timeout
 
-# voices= engine.getProperty('voices')
-# engine.setProperty('voice',voices[0].id)
-# from typing_extensions import Self
-import pyttsx3
-import speech_recognition as sr    #pip install 
-import datetime
+import pyttsx3                     #pip install pyttsx3
+import speech_recognition as sr    #pip install SpeechRecognition
+import datetime                    #pip install DateTime
 import os
 import sys
-import 
+import wikipedia as wi             #pip install wikipedia
 
 
 engine = pyttsx3.init('sapi5')
@@ -82,11 +74,11 @@ def TaskExecution():
              speak("i was made by some I T's students")
 
         elif 'wikipedia' in  query:
-               speak("searching ', ' wikipedia' ")
-               query=  query.replace("wikipedia", "")
-               result = wi.summary(query,sentences = 2)
-               print(result)
-               speak("according to', ' wikipedia ")
-               speak(result)
+             speak("searching ', ' wikipedia' ")
+             query =  query.replace("wikipedia", "")
+             result = wi.summary(query,sentences = 2)
+             print(result)
+             speak(" according to', ' wikipedia ")
+             speak(result)
 
 TaskExecution()
