@@ -45,7 +45,7 @@ def TaskExecution():
     wish()
     while True:
         query = takecommand().lower()
-
+       
         if 'play music' in query:
             music_dir = ("C:\\Users\\jinal\\Music\\music.mp3")
             os.startfile(os.path.join(music_dir))
@@ -64,7 +64,7 @@ def TaskExecution():
                  speak("ok sir, good night")
                  speak("just let me know if you need any help")
                  sys.exit()
-
+        
         elif 'who are you'  in query:
              speak("hello i'm one off the most handsome A I in the world")
              speak(", just kidding")
